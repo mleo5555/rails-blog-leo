@@ -1,6 +1,6 @@
 class Downvote < ActiveRecord::Base
-  belongs_to :users
-  belongs_to :posts
+  belongs_to :user
+  belongs_to :post
 
   # validates :user_id, :post_id, presence: true
 end

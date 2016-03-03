@@ -1,4 +1,9 @@
 <h2><%= @post.title %></h2>
+  <p>Submitted by <%= @post.user.username %> </p> <!-- make username a link to user show page -->
   <h4><%= @post.content %></h4>
   <p>karma <%= @post.karma %></p>
   <br>
+  <p>comments:</p>
+    <% @post.comments.each do |comments|%>
+      <%= comments.content %>
+    <% end %>
